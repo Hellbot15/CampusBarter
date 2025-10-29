@@ -1,0 +1,8 @@
+/* Global reset and base styles */
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body { margin: 0; background: #071018; color: #e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale }
+
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace }
+
+a { color: inherit }
