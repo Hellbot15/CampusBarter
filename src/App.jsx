@@ -8,6 +8,8 @@ import Profile from './components/Profile'
 import Messages from './components/Messages'
 import { useAuth } from './AuthContext'
 
+const API_URL = import.meta.env.VITE_API_URL || ''
+
 function App() {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
@@ -26,7 +28,7 @@ function App() {
 
   useEffect(() => {
     // Try to fetch from backend, fallback to mock data when unavailable
-    fetch('/api/items')
+    fetch(`${API_URL}/api/items`)
       .then((res) => {
         if (!res.ok) throw new Error('network')
         return res.json()
